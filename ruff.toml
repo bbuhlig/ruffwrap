@@ -1,0 +1,92 @@
+builtins = [
+    "__RUFFWRAP_EXEC__uvx ruff@0.11.13",
+    "__RUFFWRAP_MODE_enroll_DEFAULT_DEFINITION__",
+    "__RUFFWRAP_MODE_hook_DEFAULT_DEFINITION__",
+    "__RUFFWRAP_MODE_hook-fix_DEFAULT_DEFINITION__",
+    "__RUFFWRAP_MODE_verify_DEFAULT_DEFINITION__",
+]
+line-length = 120
+target-version = "py311"
+
+[lint]
+select = [
+    ######### bugs
+    "A", # flake8-builtins https://docs.astral.sh/ruff/rules#flake8-builtins-a
+    "ASYNC", # flake8-async https://docs.astral.sh/ruff/rules#flake8-async-async
+    "B", # flake8-bugbear https://docs.astral.sh/ruff/rules#flake8-bugbear-b
+    "BLE", # flake8-blind-except https://docs.astral.sh/ruff/rules#flake8-blind-except-ble
+    "DTZ", # flake8-datetimez https://docs.astral.sh/ruff/rules#flake8-datetimez-dtz
+    "E", # pycodestyle (Error) https://docs.astral.sh/ruff/rules#error-e
+    "EXE", # flake8-executable https://docs.astral.sh/ruff/rules#flake8-executable-exe
+    "F", # Pyflakes https://docs.astral.sh/ruff/rules#pyflakes-f
+    "FIX", # flake8-fixme https://docs.astral.sh/ruff/rules#flake8-fixme-fix
+    "INP", # flake8-no-pep420 https://docs.astral.sh/ruff/rules#flake8-no-pep420-inp
+    "INT", # flake8-gettext https://docs.astral.sh/ruff/rules#flake8-gettext-int
+    "LOG", # flake8-logging https://docs.astral.sh/ruff/rules#flake8-logging-log
+    "PGH", # pygrep-hooks https://docs.astral.sh/ruff/rules#pygrep-hooks-pgh
+    "PIE", # flake8-pie https://docs.astral.sh/ruff/rules#flake8-pie-pie
+    "PLE", # Pylint (Error) https://docs.astral.sh/ruff/rules#pylint-error-ple
+    "PLW", # Pylint (Warning) https://docs.astral.sh/ruff/rules#pylint-warning-plw
+    "PT", # flake8-pytest-style https://docs.astral.sh/ruff/rules#flake8-pytest-style-pt
+    "RET", # flake8-return https://docs.astral.sh/ruff/rules#flake8-return-ret
+    "RUF", # Ruff-specific rules https://docs.astral.sh/ruff/rules#ruff-specific-rules-ruf
+    "SLOT", # flake8-slots https://docs.astral.sh/ruff/rules#flake8-slots-slot
+    "T10", # flake8-debugger https://docs.astral.sh/ruff/rules#flake8-debugger-t10
+    "W", # pycodestyle (Warning) https://docs.astral.sh/ruff/rules#warning-w
+    "YTT", # flake8-2020 https://docs.astral.sh/ruff/rules#flake8-2020-ytt
+    ######### antipattern
+    "FBT", # flake8-boolean-trap https://docs.astral.sh/ruff/rules#flake8-boolean-trap-fbt
+    "TRY", # tryceratops https://docs.astral.sh/ruff/rules#tryceratops-try
+    "C90", # mccabe https://docs.astral.sh/ruff/rules#mccabe-c90
+    "PERF", # Perflint https://docs.astral.sh/ruff/rules#perflint-perf
+    ######### complexity
+    "PLR", # Pylint (Refactor) https://docs.astral.sh/ruff/rules#pylint-refactor-plr
+    "SIM", # flake8-simplify https://docs.astral.sh/ruff/rules#flake8-simplify-sim
+    "TC", # flake8-type-checking https://docs.astral.sh/ruff/rules#flake8-type-checking-tc
+    ######### imports
+    "I", # isort https://docs.astral.sh/ruff/rules#isort-i
+    "TID", # flake8-tidy-imports https://docs.astral.sh/ruff/rules#flake8-tidy-imports-tid
+    ######### style
+    "ARG", # flake8-unused-arguments https://docs.astral.sh/ruff/rules#flake8-unused-arguments-arg
+    "C4", # flake8-comprehensions https://docs.astral.sh/ruff/rules#flake8-comprehensions-c4
+    "COM", # flake8-commas https://docs.astral.sh/ruff/rules#flake8-commas-com
+    "EM", # flake8-errmsg https://docs.astral.sh/ruff/rules#flake8-errmsg-em
+    "ERA", # eradicate https://docs.astral.sh/ruff/rules#eradicate-era
+    "FLY", # flynt https://docs.astral.sh/ruff/rules#flynt-fly
+    "FURB", # refurb https://docs.astral.sh/ruff/rules#refurb-furb
+    "ICN", # flake8-import-conventions https://docs.astral.sh/ruff/rules#flake8-import-conventions-icn
+    "ISC", # flake8-implicit-str-concat https://docs.astral.sh/ruff/rules#flake8-implicit-str-concat-isc
+    "N", # pep8-naming https://docs.astral.sh/ruff/rules#pep8-naming-n
+    "PLC", # Pylint (Convention) https://docs.astral.sh/ruff/rules#pylint-convention-plc
+# pathlib would be an additional module to load; trying to minimize module loading for performance
+#    "PTH", # flake8-use-pathlib https://docs.astral.sh/ruff/rules#flake8-use-pathlib-pth
+    "Q", # flake8-quotes https://docs.astral.sh/ruff/rules#flake8-quotes-q
+    "RSE", # flake8-raise https://docs.astral.sh/ruff/rules#flake8-raise-rse
+    "SLF", # flake8-self https://docs.astral.sh/ruff/rules#flake8-self-slf
+    "TD", # flake8-todos https://docs.astral.sh/ruff/rules#flake8-todos-td
+    "UP", # pyupgrade https://docs.astral.sh/ruff/rules#pyupgrade-up
+    ######### docstring
+    "D", # pydocstyle https://docs.astral.sh/ruff/rules#pydocstyle-d
+    #"DOC", # pydoclint https://docs.astral.sh/ruff/rules#pydoclint-doc
+    ######### typing
+    "ANN", # flake8-annotations https://docs.astral.sh/ruff/rules#flake8-annotations-ann
+    "FA", # flake8-future-annotations https://docs.astral.sh/ruff/rules#flake8-future-annotations-fa
+]
+
+ignore = [
+    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191", "E111", "E114", "E117", "D206", "D300", "Q000", "Q001", "Q002", "Q003", "COM812", "COM819", "ISC002", "E501",
+
+    # RUF100 (unused-noqa) and RUF101 (redirected-noqa) are managed out through removing and reintroducing
+    # all noqa through the hook (on each commit/save)
+    "RUF100", "RUF101",
+
+    # https://github.com/astral-sh/ruff/issues/14442 rules breaking shebangs
+    "D100", "CPY001", "INP001",
+]
+
+[lint.pydocstyle]
+# Preferred docstyle convention is Sphinx which is not supported by ruff, though it is on the roadmap.
+# Ref https://github.com/astral-sh/ruff/issues/6606. PEP257 is a superset of sphinx and is what the
+# a proposed PR implementing issue 6606 is based on, so we'll go with that for now.
+convention = "pep257"

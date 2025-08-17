@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling>=1.24.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ruffwrap"
+version = "0.0.1"
+description = "Wrapper around Ruff for version pinning and batch modes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ruffwrap"]
+sources = ["src"]
+
+[tool.hatch.build.targets.wheel.shared-scripts]
+"bin/ruffwrap" = "ruffwrap"
